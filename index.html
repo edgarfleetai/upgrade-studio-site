@@ -798,6 +798,295 @@
   .about-principle:first-child{border-top:0}
 }
 
+
+/* --- Calculator premium v9 --- */
+.calculator-premium{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:70px;
+  padding:96px 5vw;
+  background:#f2f2ef;
+  color:#111;
+}
+.calc-side{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.calc-side h2{
+  margin:0;
+  font-size:clamp(38px,4.1vw,64px);
+  line-height:.98;
+  letter-spacing:-2.2px;
+}
+.calc-lead{
+  margin:28px 0 0;
+  max-width:620px;
+  color:#666;
+  font-size:14px;
+  line-height:1.85;
+}
+.calc-points{
+  display:grid;
+  grid-template-columns:1fr;
+  margin-top:42px;
+  border-top:1px solid #cacac5;
+}
+.calc-points>div{
+  display:grid;
+  grid-template-columns:46px 1fr;
+  align-items:center;
+  padding:15px 0;
+  border-bottom:1px solid #d2d2cd;
+}
+.calc-points span{
+  color:#8a8a85;
+  font-size:9px;
+  letter-spacing:2px;
+}
+.calc-points p{
+  margin:0;
+  font-size:12px;
+  color:#505050;
+}
+.calc-panel{
+  background:#0c0c0c;
+  color:#fff;
+  padding:38px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  align-self:center;
+  box-shadow:0 30px 80px rgba(0,0,0,.14);
+}
+.calc-field{
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+}
+.calc-field-wide{grid-column:1/-1}
+.calc-field label{
+  color:#8c8c8c;
+  font-size:9px;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+}
+.calc-panel input,.calc-panel select{
+  width:100%;
+  padding:16px 15px;
+  border:1px solid #303030;
+  background:#141414;
+  color:#fff;
+  outline:none;
+  transition:border-color .2s ease,background .2s ease;
+}
+.calc-panel input:focus,.calc-panel select:focus{
+  border-color:#777;
+  background:#181818;
+}
+.calc-result{
+  grid-column:1/-1;
+  padding:28px 0 24px;
+  margin-top:4px;
+  border-top:1px solid #2a2a2a;
+  border-bottom:1px solid #2a2a2a;
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+.calc-result-label{
+  color:#777;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:1.7px;
+}
+.calc-result strong{
+  font-size:clamp(30px,3vw,48px);
+  letter-spacing:-1.5px;
+  line-height:1;
+}
+.calc-result span{
+  color:#aaa;
+  font-size:12px;
+}
+.calc-warning{
+  grid-column:1/-1;
+  color:#707070;
+  font-size:10px;
+  line-height:1.6;
+}
+.calc-cta{grid-column:1/-1;margin-top:4px}
+@media(max-width:1000px){
+  .calculator-premium{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .calculator-premium{padding:72px 20px 64px}
+  .calc-side h2{font-size:39px;letter-spacing:-1.5px}
+  .calc-panel{grid-template-columns:1fr;padding:24px}
+  .calc-field,
+  .calc-field-wide,
+  .calc-result,
+  .calc-warning,
+  .calc-cta{grid-column:1}
+}
+
+
+/* --- Contacts premium v10 --- */
+.contacts-premium{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:80px;
+  padding:100px 5vw 92px;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255,255,255,.05), transparent 24%),
+    #090909;
+  color:#fff;
+  border-top:1px solid #1f1f1f;
+}
+.contact-left{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.contact-left h2{
+  margin:0;
+  font-size:clamp(46px,5vw,78px);
+  line-height:.92;
+  letter-spacing:-3px;
+}
+.contact-lead{
+  margin:28px 0 0;
+  max-width:560px;
+  color:#969696;
+  line-height:1.8;
+  font-size:14px;
+}
+.contact-direct{
+  margin-top:46px;
+  display:grid;
+  gap:18px;
+  max-width:560px;
+}
+.contact-direct>div{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  align-items:center;
+  padding-bottom:16px;
+  border-bottom:1px solid #252525;
+}
+.contact-direct span{
+  font-size:9px;
+  letter-spacing:1.7px;
+  color:#656565;
+}
+.contact-direct a{
+  font-size:15px;
+  color:#ddd;
+}
+.lead-form-premium{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  background:#111;
+  border:1px solid #222;
+  padding:36px;
+  box-shadow:0 30px 80px rgba(0,0,0,.22);
+}
+.lead-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.lead-form-premium label{
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+}
+.lead-form-premium label>span{
+  font-size:9px;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  color:#777;
+}
+.lead-form-premium input,
+.lead-form-premium select,
+.lead-form-premium textarea{
+  width:100%;
+  padding:16px;
+  border:1px solid #303030;
+  background:#151515;
+  color:#fff;
+  outline:none;
+}
+.lead-form-premium textarea{
+  min-height:130px;
+  resize:vertical;
+}
+.lead-form-premium input:focus,
+.lead-form-premium select:focus,
+.lead-form-premium textarea:focus{
+  border-color:#6e6e6e;
+  background:#181818;
+}
+.lead-agree{
+  color:#666;
+  font-size:9px;
+  line-height:1.55;
+}
+.lead-submit{
+  margin-top:4px;
+}
+.form-status{
+  margin:0;
+  min-height:18px;
+  font-size:11px;
+  color:#aaa;
+}
+.footer-premium{
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:40px;
+  align-items:start;
+  padding:42px 5vw 36px;
+  border-top:1px solid #202020;
+  background:#070707;
+  color:#787878;
+  font-size:10px;
+}
+.footer-brand p{
+  margin:16px 0 0;
+}
+.footer-nav{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px 24px;
+}
+.footer-nav a{
+  color:#9a9a9a;
+  text-transform:uppercase;
+  letter-spacing:.6px;
+}
+.footer-copy{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:8px;
+}
+@media(max-width:1000px){
+  .contacts-premium{grid-template-columns:1fr}
+  .footer-premium{grid-template-columns:1fr 1fr}
+  .footer-copy{align-items:flex-start}
+}
+@media(max-width:640px){
+  .contacts-premium{padding:72px 20px 64px}
+  .contact-left h2{font-size:48px;letter-spacing:-2px}
+  .contact-direct>div{grid-template-columns:1fr;gap:6px}
+  .lead-form-premium{padding:24px}
+  .lead-row{grid-template-columns:1fr}
+  .footer-premium{grid-template-columns:1fr;gap:28px;padding:34px 20px}
+  .footer-nav{grid-template-columns:1fr 1fr}
+}
+
 </style>
 </head>
 <body>
@@ -1156,65 +1445,154 @@
 </section>
 
 
-    <section class="calculator" id="calc">
-      <div class="calc-copy reveal">
-        <p class="eyebrow">ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ</p>
-        <h2>УЗНАЙТЕ ОРИЕНТИРОВОЧНУЮ СТОИМОСТЬ</h2>
-        <p>Калькулятор даёт примерный диапазон. Точная смета формируется после обсуждения задачи и осмотра объекта.</p>
-      </div>
-      <form class="calc-box reveal" id="calcForm">
-        <label>Тип объекта
-          <select id="type">
-            <option value="flat">Квартира</option>
-            <option value="house">Дом</option>
-            <option value="commercial">Коммерческое помещение</option>
-          </select>
-        </label>
-        <label>Площадь, м²
-          <input id="area" type="number" min="10" max="1000" value="60" />
-        </label>
-        <label>Уровень работ
-          <select id="level">
-            <option value="base">Базовый</option>
-            <option value="comfort" selected>Комфорт</option>
-            <option value="premium">Премиум</option>
-          </select>
-        </label>
-        <div class="estimate">
-          <small>Предварительная оценка</small>
-          <strong id="estimateValue">от 1 080 000 ₽</strong>
-          <span id="estimateNote">≈ 18 000 ₽/м²</span>
-        </div>
-        <a class="btn btn-light full" href="#contacts">Получить точную смету →</a>
-      </form>
-    </section>
+    
+<section class="calculator calculator-premium" id="calc">
+  <div class="calc-side reveal">
+    <p class="eyebrow dark">ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ</p>
+    <h2>ПОЛУЧИТЕ ОРИЕНТИР<br>ПО БЮДЖЕТУ ЗА МИНУТУ</h2>
+    <p class="calc-lead">
+      Выберите тип объекта, площадь и уровень работ. Калькулятор покажет ориентировочную стоимость.
+      Точная смета формируется после обсуждения задачи и осмотра объекта.
+    </p>
 
-    <section class="contacts" id="contacts">
-      <div class="contact-copy reveal">
-        <p class="eyebrow">СВЯЖИТЕСЬ С НАМИ</p>
-        <h2>ОБСУДИМ ВАШ ОБЪЕКТ</h2>
-        <p>Оставьте контакты и кратко опишите задачу. В рабочей версии сайта заявку можно отправлять напрямую в Telegram.</p>
-        <div class="contact-links">
-          <a href="tel:+79991234567">+7 (999) 123-45-67</a>
-          <a href="mailto:info@upgrade-studio.ru">info@upgrade-studio.ru</a>
-        </div>
+    <div class="calc-points">
+      <div><span>01</span><p>Без регистрации и звонков</p></div>
+      <div><span>02</span><p>Расчёт обновляется сразу</p></div>
+      <div><span>03</span><p>Можно перейти к точной смете</p></div>
+    </div>
+  </div>
+
+  <form class="calc-panel reveal" id="calcForm">
+    <div class="calc-field">
+      <label for="type">Тип объекта</label>
+      <select id="type">
+        <option value="flat">Квартира</option>
+        <option value="house">Дом</option>
+        <option value="commercial">Коммерческое помещение</option>
+      </select>
+    </div>
+
+    <div class="calc-field">
+      <label for="area">Площадь, м²</label>
+      <input id="area" type="number" min="10" max="1000" value="60" />
+    </div>
+
+    <div class="calc-field calc-field-wide">
+      <label for="level">Уровень работ</label>
+      <select id="level">
+        <option value="base">Базовый</option>
+        <option value="comfort" selected>Комфорт</option>
+        <option value="premium">Премиум</option>
+      </select>
+    </div>
+
+    <div class="calc-result">
+      <div class="calc-result-label">Предварительная стоимость</div>
+      <strong id="estimateValue">от 1 080 000 ₽</strong>
+      <span id="estimateNote">≈ 18 000 ₽/м²</span>
+    </div>
+
+    <div class="calc-warning">
+      Итог зависит от состояния объекта, состава работ, материалов и инженерных решений.
+    </div>
+
+    <a class="btn btn-light full calc-cta" href="#contacts">
+      Получить точную смету <span>→</span>
+    </a>
+  </form>
+</section>
+
+
+    
+<section class="contacts contacts-premium" id="contacts">
+  <div class="contact-left reveal">
+    <p class="eyebrow">СВЯЖИТЕСЬ С НАМИ</p>
+    <h2>ОБСУДИМ<br>ВАШ ОБЪЕКТ</h2>
+    <p class="contact-lead">
+      Оставьте контакты и кратко опишите задачу. Мы свяжемся с вами,
+      уточним детали и предложим следующий шаг.
+    </p>
+
+    <div class="contact-direct">
+      <div>
+        <span>ТЕЛЕФОН</span>
+        <a href="tel:+79991234567">+7 (999) 123-45-67</a>
       </div>
-      <form class="lead-form reveal" id="leadForm">
-        <input name="name" placeholder="Ваше имя" required />
-        <input name="phone" placeholder="Телефон" required />
-        <select name="service"><option>Ремонт квартиры</option><option>Строительство дома</option><option>Коммерческое помещение</option><option>Отделочные работы</option></select>
-        <textarea name="message" placeholder="Расскажите коротко об объекте"></textarea>
-        <button class="btn btn-light full" type="submit">Отправить заявку →</button>
-        <p class="form-status" id="formStatus"></p>
-      </form>
-    </section>
+      <div>
+        <span>ПОЧТА</span>
+        <a href="mailto:info@upgrade-studio.ru">info@upgrade-studio.ru</a>
+      </div>
+      <div>
+        <span>МЕССЕНДЖЕР</span>
+        <a href="#contacts">Telegram / WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <form class="lead-form lead-form-premium reveal" id="leadForm">
+    <div class="lead-row">
+      <label>
+        <span>Ваше имя</span>
+        <input name="name" placeholder="Как к вам обращаться" required />
+      </label>
+      <label>
+        <span>Телефон</span>
+        <input name="phone" placeholder="+7 ___ ___-__-__" required />
+      </label>
+    </div>
+
+    <label>
+      <span>Тип работ</span>
+      <select name="service">
+        <option>Строительство дома</option>
+        <option>Ремонт квартиры</option>
+        <option>Коммерческое помещение</option>
+        <option>Отделочные работы</option>
+      </select>
+    </label>
+
+    <label>
+      <span>Расскажите об объекте</span>
+      <textarea name="message" placeholder="Например: квартира 70 м², нужна чистовая отделка"></textarea>
+    </label>
+
+    <div class="lead-agree">
+      Отправляя заявку, вы соглашаетесь на обработку контактных данных.
+    </div>
+
+    <button class="btn btn-light full lead-submit" type="submit">
+      Отправить заявку <span>→</span>
+    </button>
+
+    <p class="form-status" id="formStatus"></p>
+  </form>
+</section>
+
   </main>
 
-  <footer class="footer">
-    <a class="brand" href="#top"><span class="brand-mark">US</span><span class="brand-text"><b>UPGRADE</b><small>STUDIO</small></span></a>
+  
+<footer class="footer footer-premium">
+  <div class="footer-brand">
+    <a class="brand" href="#top">
+      <span class="brand-mark">US</span>
+      <span class="brand-text"><b>UPGRADE</b><small>STUDIO</small></span>
+    </a>
     <p>Строительство и ремонт под ключ</p>
-    <p>© 2026 UPGRADE STUDIO</p>
-  </footer>
+  </div>
+
+  <div class="footer-nav">
+    <a href="#services">Услуги</a>
+    <a href="#process">Процесс</a>
+    <a href="#projects">Проекты</a>
+    <a href="#about">О студии</a>
+  </div>
+
+  <div class="footer-copy">
+    <span>© 2026 UPGRADE STUDIO</span>
+    <span>Все права защищены</span>
+  </div>
+</footer>
+
   <script>
 const menuBtn=document.getElementById('menuBtn');
 const nav=document.getElementById('nav');
@@ -1250,5 +1628,66 @@ document.getElementById('leadForm')?.addEventListener('submit',e=>{
 });
 
 </script>
+
+<script>
+(function(){
+  const typeEl = document.getElementById('type');
+  const areaEl = document.getElementById('area');
+  const levelEl = document.getElementById('level');
+  const valueEl = document.getElementById('estimateValue');
+  const noteEl = document.getElementById('estimateNote');
+
+  if(!typeEl || !areaEl || !levelEl || !valueEl || !noteEl) return;
+
+  const base = {
+    flat: {base:14000, comfort:18000, premium:26000},
+    house: {base:25000, comfort:34000, premium:48000},
+    commercial: {base:16000, comfort:22000, premium:32000}
+  };
+
+  function fmt(n){
+    return new Intl.NumberFormat('ru-RU').format(Math.round(n));
+  }
+
+  function updateEstimate(){
+    const area = Math.max(10, Math.min(1000, Number(areaEl.value) || 10));
+    const rate = base[typeEl.value][levelEl.value];
+    const total = area * rate;
+    valueEl.textContent = 'от ' + fmt(total) + ' ₽';
+    noteEl.textContent = '≈ ' + fmt(rate) + ' ₽/м²';
+  }
+
+  [typeEl, areaEl, levelEl].forEach(el => {
+    el.addEventListener('input', updateEstimate);
+    el.addEventListener('change', updateEstimate);
+  });
+
+  updateEstimate();
+})();
+</script>
+
+
+<script>
+(function(){
+  const form = document.getElementById('leadForm');
+  const status = document.getElementById('formStatus');
+  if(!form || !status) return;
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const data = new FormData(form);
+    const name = (data.get('name') || '').toString().trim();
+    const phone = (data.get('phone') || '').toString().trim();
+
+    if(!name || !phone){
+      status.textContent = 'Заполните имя и телефон.';
+      return;
+    }
+
+    status.textContent = 'Заявка заполнена. Следующим шагом подключим отправку прямо в Telegram.';
+  });
+})();
+</script>
+
 </body>
 </html>
