@@ -648,6 +648,156 @@
   }
 }
 
+
+/* --- About premium v8 --- */
+.about-premium{
+  display:grid;
+  grid-template-columns:.95fr 1.35fr;
+  min-height:650px;
+  background:#0b0b0b;
+  color:#fff;
+}
+.about-visual{
+  position:relative;
+  min-height:650px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255,255,255,.08), transparent 20%),
+    linear-gradient(145deg,#1d1d1d 0%,#0c0c0c 55%,#151515 100%);
+  border-right:1px solid #232323;
+}
+.about-visual-grid{
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:linear-gradient(180deg,#000,transparent 85%);
+}
+.about-visual:before{
+  content:"";
+  position:absolute;
+  width:72%;
+  height:58%;
+  right:-8%;
+  bottom:9%;
+  background:
+    linear-gradient(160deg,#313131,#111 60%);
+  clip-path:polygon(15% 24%,62% 0,100% 18%,100% 100%,0 100%,0 38%);
+  border:1px solid rgba(255,255,255,.04);
+}
+.about-visual:after{
+  content:"";
+  position:absolute;
+  left:8%;
+  top:10%;
+  width:110px;
+  height:110px;
+  border:1px solid rgba(255,255,255,.20);
+  transform:rotate(45deg);
+}
+.about-visual-label{
+  position:absolute;
+  left:8%;
+  bottom:7%;
+  font-size:clamp(42px,6vw,86px);
+  font-weight:800;
+  letter-spacing:-4px;
+  color:rgba(255,255,255,.055);
+  white-space:nowrap;
+}
+.about-content{
+  padding:86px 7vw 72px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.about-content h2{
+  margin:0;
+  font-size:clamp(38px,4vw,62px);
+  line-height:.98;
+  letter-spacing:-2.2px;
+}
+.about-lead{
+  margin:30px 0 0;
+  max-width:760px;
+  color:#9a9a9a;
+  font-size:14px;
+  line-height:1.85;
+}
+.about-principles{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  margin-top:48px;
+  border-top:1px solid #242424;
+  border-bottom:1px solid #242424;
+}
+.about-principle{
+  padding:28px 24px 28px 0;
+}
+.about-principle + .about-principle{
+  border-left:1px solid #242424;
+  padding-left:24px;
+}
+.about-principle span{
+  display:block;
+  color:#5f5f5f;
+  font-size:9px;
+  letter-spacing:2px;
+  margin-bottom:28px;
+}
+.about-principle h3{
+  margin:0 0 12px;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.3px;
+}
+.about-principle p{
+  margin:0;
+  color:#7f7f7f;
+  font-size:11px;
+  line-height:1.7;
+}
+.about-note{
+  display:flex;
+  align-items:flex-start;
+  gap:22px;
+  margin-top:34px;
+}
+.about-note-line{
+  width:46px;
+  border-top:1px solid #666;
+  margin-top:10px;
+  flex:0 0 auto;
+}
+.about-note p{
+  margin:0;
+  max-width:650px;
+  color:#9a9a9a;
+  font-size:12px;
+  line-height:1.75;
+}
+@media(max-width:1000px){
+  .about-premium{grid-template-columns:1fr}
+  .about-visual{min-height:420px;border-right:0;border-bottom:1px solid #232323}
+  .about-content{padding:72px 5vw 64px}
+}
+@media(max-width:640px){
+  .about-visual{min-height:320px}
+  .about-content{padding:62px 20px 56px}
+  .about-content h2{font-size:39px;letter-spacing:-1.5px}
+  .about-principles{grid-template-columns:1fr}
+  .about-principle,
+  .about-principle + .about-principle{
+    border-left:0;
+    border-top:1px solid #242424;
+    padding:24px 0;
+  }
+  .about-principle:first-child{border-top:0}
+}
+
 </style>
 </head>
 <body>
@@ -959,19 +1109,52 @@
 </section>
 
 
-    <section class="about" id="about">
-      <div class="about-photo reveal"></div>
-      <div class="about-copy reveal">
-        <p class="eyebrow">О СТУДИИ</p>
-        <h2>UPGRADE STUDIO</h2>
-        <p>Мы строим отношения с клиентом вокруг понятного результата: что делаем, сколько это стоит, какие этапы впереди и что происходит на объекте сейчас.</p>
-        <div class="stats">
-          <div><strong>01</strong><span>единая команда<br>на объекте</span></div>
-          <div><strong>100%</strong><span>прозрачность<br>по этапам</span></div>
-          <div><strong>24/7</strong><span>доступ к фото<br>и отчётам</span></div>
-        </div>
+    
+<section class="about about-premium" id="about">
+  <div class="about-visual reveal">
+    <div class="about-visual-grid"></div>
+    <div class="about-visual-label">UPGRADE STUDIO</div>
+  </div>
+
+  <div class="about-content reveal">
+    <p class="eyebrow">О СТУДИИ</p>
+    <h2>СТРОИМ НЕ ПРОСТО ОБЪЕКТЫ.<br>СТРОИМ ДОВЕРИЕ.</h2>
+
+    <p class="about-lead">
+      UPGRADE STUDIO — строительная студия с понятным подходом:
+      сначала разбираемся в задаче, потом считаем, фиксируем договорённости
+      и последовательно ведём объект до результата.
+    </p>
+
+    <div class="about-principles">
+      <div class="about-principle">
+        <span>01</span>
+        <h3>Личная ответственность</h3>
+        <p>Клиент понимает, кто отвечает за объект и к кому обращаться по любому вопросу.</p>
       </div>
-    </section>
+
+      <div class="about-principle">
+        <span>02</span>
+        <h3>Без лишних обещаний</h3>
+        <p>Говорим по делу: сроки, этапы, бюджет и реальные варианты решения.</p>
+      </div>
+
+      <div class="about-principle">
+        <span>03</span>
+        <h3>Понятный результат</h3>
+        <p>Каждый этап можно проверить, принять и только после этого двигаться дальше.</p>
+      </div>
+    </div>
+
+    <div class="about-note">
+      <div class="about-note-line"></div>
+      <p>
+        Для нас важно, чтобы после завершения объекта клиент был готов рекомендовать UPGRADE STUDIO другим.
+      </p>
+    </div>
+  </div>
+</section>
+
 
     <section class="calculator" id="calc">
       <div class="calc-copy reveal">
