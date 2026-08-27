@@ -228,6 +228,269 @@
   .services-bottom{align-items:flex-start;flex-direction:column}
 }
 
+
+/* --- Trust premium v5 --- */
+.trust-premium{
+  padding:96px 5vw 82px;
+  background:
+    radial-gradient(circle at 86% 10%, rgba(255,255,255,.045), transparent 24%),
+    #090909;
+  color:#fff;
+  border-top:1px solid #1f1f1f;
+  border-bottom:1px solid #1f1f1f;
+}
+.trust-top{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:80px;
+  align-items:end;
+  padding-bottom:46px;
+  border-bottom:1px solid #252525;
+}
+.trust-top h2{
+  margin:0;
+  font-size:clamp(38px,4.2vw,66px);
+  line-height:.98;
+  letter-spacing:-2.4px;
+}
+.trust-lead{
+  margin:0 0 4px;
+  max-width:560px;
+  color:#9d9d9d;
+  font-size:14px;
+  line-height:1.8;
+}
+.trust-premium-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+.trust-premium-card{
+  min-height:330px;
+  padding:32px 30px 28px;
+  border-right:1px solid #252525;
+  position:relative;
+  transition:background .3s ease,transform .3s ease;
+}
+.trust-premium-card:first-child{border-left:1px solid #252525}
+.trust-premium-card:hover{
+  background:#111;
+  transform:translateY(-3px);
+}
+.trust-card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:74px;
+}
+.trust-number{
+  color:#666;
+  font-size:10px;
+  letter-spacing:2px;
+}
+.trust-symbol{
+  font-size:29px;
+  color:#d8d8d8;
+  opacity:.85;
+}
+.trust-premium-card h3{
+  margin:0 0 14px;
+  font-size:16px;
+  text-transform:uppercase;
+  letter-spacing:.3px;
+}
+.trust-premium-card p{
+  margin:0;
+  color:#888;
+  font-size:12px;
+  line-height:1.75;
+  max-width:300px;
+}
+.trust-line{
+  position:absolute;
+  left:30px;right:30px;bottom:22px;
+  height:1px;background:#252525;
+}
+.trust-premium-card:hover .trust-line{
+  background:linear-gradient(90deg,#fff,#252525 70%);
+}
+.trust-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  padding-top:38px;
+}
+.trust-bottom>div{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+.trust-caption{
+  font-size:10px;
+  letter-spacing:3px;
+  color:#666;
+  white-space:nowrap;
+}
+.trust-bottom p{
+  margin:0;
+  max-width:650px;
+  color:#9b9b9b;
+  font-size:13px;
+  line-height:1.65;
+}
+@media(max-width:1000px){
+  .trust-top{grid-template-columns:1fr;gap:26px}
+  .trust-premium-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-premium-card:nth-child(3){border-left:1px solid #252525}
+}
+@media(max-width:640px){
+  .trust-premium{padding:72px 20px 62px}
+  .trust-top{padding-bottom:34px}
+  .trust-top h2{font-size:40px;letter-spacing:-1.6px}
+  .trust-premium-grid{grid-template-columns:1fr}
+  .trust-premium-card,
+  .trust-premium-card:first-child,
+  .trust-premium-card:nth-child(3){
+    border-left:1px solid #252525;
+    min-height:255px;
+  }
+  .trust-card-top{margin-bottom:44px}
+  .trust-bottom{align-items:flex-start;flex-direction:column}
+  .trust-bottom>div{align-items:flex-start;flex-direction:column;gap:12px}
+}
+
+
+/* --- Process premium v6 --- */
+.process-premium{
+  background:#f3f3f0;
+  color:#111;
+  padding:96px 5vw 88px;
+}
+.process-head{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:80px;
+  align-items:end;
+  padding-bottom:48px;
+  border-bottom:1px solid #cfcfcb;
+}
+.process-head h2{
+  margin:0;
+  font-size:clamp(38px,4vw,62px);
+  line-height:1;
+  letter-spacing:-2px;
+}
+.process-intro{
+  margin:0 0 4px;
+  color:#666;
+  font-size:14px;
+  line-height:1.8;
+  max-width:560px;
+}
+.process-track{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:28px;
+  padding-top:58px;
+}
+.process-track-line{
+  position:absolute;
+  top:69px;
+  left:0;
+  right:0;
+  height:1px;
+  background:#bbb;
+}
+.process-item{
+  position:relative;
+  padding-top:38px;
+  min-height:240px;
+}
+.process-dot{
+  position:absolute;
+  top:5px;
+  left:0;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#111;
+  border:3px solid #f3f3f0;
+  box-shadow:0 0 0 1px #111;
+  z-index:2;
+}
+.process-index{
+  font-size:10px;
+  letter-spacing:2px;
+  color:#8a8a86;
+  margin-bottom:22px;
+}
+.process-item h3{
+  margin:0 0 12px;
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+}
+.process-item p{
+  margin:0;
+  color:#666;
+  font-size:12px;
+  line-height:1.7;
+  max-width:220px;
+}
+.process-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  padding-top:36px;
+  border-top:1px solid #cfcfcb;
+}
+.process-footer p{
+  margin:0;
+  color:#666;
+  font-size:13px;
+}
+@media(max-width:1000px){
+  .process-head{grid-template-columns:1fr;gap:28px}
+  .process-track{
+    grid-template-columns:repeat(3,1fr);
+    gap:44px 28px;
+  }
+  .process-track-line{display:none}
+  .process-item{
+    border-top:1px solid #bbb;
+    padding-top:34px;
+    min-height:210px;
+  }
+  .process-dot{top:-6px}
+}
+@media(max-width:640px){
+  .process-premium{padding:72px 20px 64px}
+  .process-head{padding-bottom:34px}
+  .process-head h2{font-size:39px;letter-spacing:-1.4px}
+  .process-track{
+    grid-template-columns:1fr;
+    gap:0;
+    padding-top:22px;
+  }
+  .process-item{
+    min-height:0;
+    padding:28px 0 28px 34px;
+    border-top:1px solid #c7c7c2;
+  }
+  .process-dot{
+    top:31px;
+    left:0;
+  }
+  .process-index{margin-bottom:10px}
+  .process-item p{max-width:none}
+  .process-footer{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -322,33 +585,136 @@
 </section>
 
 
-    <section class="section dark-section" id="trust">
-      <div class="trust-intro reveal">
-        <p class="eyebrow">ПОЧЕМУ НАС ВЫБИРАЮТ</p>
-        <h2>НАДЁЖНОСТЬ<br>И ПРОЗРАЧНОСТЬ</h2>
-        <p>Без громких обещаний: фиксируем договорённости, считаем смету и показываем этапы работ.</p>
-      </div>
-      <div class="trust-grid">
-        <article class="trust-card reveal"><div>▤</div><h3>Работа по договору</h3><p>Фиксируем объём работ, сроки и порядок расчётов.</p></article>
-        <article class="trust-card reveal"><div>▧</div><h3>Прозрачная смета</h3><p>До начала работ клиент понимает состав и ориентировочную стоимость.</p></article>
-        <article class="trust-card reveal"><div>◉</div><h3>Фотоотчёты</h3><p>Регулярно показываем прогресс и ключевые этапы выполнения.</p></article>
-        <article class="trust-card reveal"><div>◷</div><h3>Контроль сроков</h3><p>Планируем этапы и заранее сообщаем о любых изменениях.</p></article>
-      </div>
-    </section>
+    
+<section class="trust-premium" id="trust">
+  <div class="trust-top reveal">
+    <div>
+      <p class="eyebrow">ПОЧЕМУ НАМ ДОВЕРЯЮТ</p>
+      <h2>ПРОЗРАЧНОСТЬ<br>НА КАЖДОМ ЭТАПЕ</h2>
+    </div>
+    <p class="trust-lead">
+      Строительство без сюрпризов: заранее фиксируем договорённости,
+      показываем ход работ и держим клиента в курсе.
+    </p>
+  </div>
 
-    <section class="section light" id="process">
-      <div class="section-head reveal">
-        <div><p class="eyebrow dark">КАК МЫ РАБОТАЕМ</p><h2>ПРОСТОЙ И ПОНЯТНЫЙ ПРОЦЕСС</h2></div>
+  <div class="trust-premium-grid">
+    <article class="trust-premium-card reveal">
+      <div class="trust-card-top">
+        <span class="trust-number">01</span>
+        <span class="trust-symbol">▤</span>
       </div>
-      <div class="process-grid">
-        <div class="step reveal"><span>1</span><h3>Заявка</h3><p>Вы оставляете заявку или звоните нам.</p></div>
-        <div class="step reveal"><span>2</span><h3>Выезд</h3><p>Осматриваем объект и обсуждаем задачу.</p></div>
-        <div class="step reveal"><span>3</span><h3>Смета</h3><p>Формируем перечень работ и материалов.</p></div>
-        <div class="step reveal"><span>4</span><h3>Договор</h3><p>Закрепляем условия сотрудничества.</p></div>
-        <div class="step reveal"><span>5</span><h3>Работы</h3><p>Выполняем этапы и держим связь.</p></div>
-        <div class="step reveal"><span>6</span><h3>Сдача</h3><p>Проверяем результат и закрываем объект.</p></div>
+      <h3>Работа по договору</h3>
+      <p>Фиксируем объём работ, порядок оплаты, сроки и ответственность сторон.</p>
+      <div class="trust-line"></div>
+    </article>
+
+    <article class="trust-premium-card reveal">
+      <div class="trust-card-top">
+        <span class="trust-number">02</span>
+        <span class="trust-symbol">▧</span>
       </div>
-    </section>
+      <h3>Понятная смета</h3>
+      <p>До начала работ вы понимаете, из чего складывается стоимость и за что платите.</p>
+      <div class="trust-line"></div>
+    </article>
+
+    <article class="trust-premium-card reveal">
+      <div class="trust-card-top">
+        <span class="trust-number">03</span>
+        <span class="trust-symbol">◉</span>
+      </div>
+      <h3>Фотоотчёты</h3>
+      <p>Показываем ключевые этапы и прогресс по объекту без необходимости приезжать каждый день.</p>
+      <div class="trust-line"></div>
+    </article>
+
+    <article class="trust-premium-card reveal">
+      <div class="trust-card-top">
+        <span class="trust-number">04</span>
+        <span class="trust-symbol">◷</span>
+      </div>
+      <h3>Контроль сроков</h3>
+      <p>Разбиваем проект на этапы и заранее предупреждаем, если появляются изменения по срокам.</p>
+      <div class="trust-line"></div>
+    </article>
+  </div>
+
+  <div class="trust-bottom reveal">
+    <div>
+      <span class="trust-caption">UPGRADE STUDIO</span>
+      <p>Наша задача — чтобы клиент понимал, что происходит на объекте сегодня и что будет завтра.</p>
+    </div>
+    <a class="btn btn-ghost" href="#contacts">Обсудить ваш объект <span>↗</span></a>
+  </div>
+</section>
+
+
+    
+<section class="process-premium" id="process">
+  <div class="process-head reveal">
+    <div>
+      <p class="eyebrow dark">КАК МЫ РАБОТАЕМ</p>
+      <h2>ПОНЯТНЫЙ ПРОЦЕСС<br>БЕЗ ЛИШНЕЙ СУЕТЫ</h2>
+    </div>
+    <p class="process-intro">
+      Делим проект на понятные этапы, чтобы вы всегда знали,
+      что уже сделано, что происходит сейчас и что будет дальше.
+    </p>
+  </div>
+
+  <div class="process-track reveal">
+    <div class="process-track-line"></div>
+
+    <article class="process-item">
+      <span class="process-dot"></span>
+      <div class="process-index">01</div>
+      <h3>Заявка</h3>
+      <p>Вы оставляете заявку или связываетесь с нами удобным способом.</p>
+    </article>
+
+    <article class="process-item">
+      <span class="process-dot"></span>
+      <div class="process-index">02</div>
+      <h3>Выезд</h3>
+      <p>Осматриваем объект, уточняем задачу и фиксируем исходные данные.</p>
+    </article>
+
+    <article class="process-item">
+      <span class="process-dot"></span>
+      <div class="process-index">03</div>
+      <h3>Смета</h3>
+      <p>Формируем перечень работ и ориентировочный бюджет по этапам.</p>
+    </article>
+
+    <article class="process-item">
+      <span class="process-dot"></span>
+      <div class="process-index">04</div>
+      <h3>Договор</h3>
+      <p>Согласовываем условия, сроки, порядок оплаты и ответственность сторон.</p>
+    </article>
+
+    <article class="process-item">
+      <span class="process-dot"></span>
+      <div class="process-index">05</div>
+      <h3>Работы</h3>
+      <p>Выполняем этапы, контролируем качество и держим вас в курсе.</p>
+    </article>
+
+    <article class="process-item">
+      <span class="process-dot"></span>
+      <div class="process-index">06</div>
+      <h3>Сдача</h3>
+      <p>Проверяем результат, закрываем замечания и передаём готовый объект.</p>
+    </article>
+  </div>
+
+  <div class="process-footer reveal">
+    <p>Каждый этап можно зафиксировать в договоре и контролировать по фотоотчётам.</p>
+    <a class="btn btn-dark-outline" href="#contacts">Начать с консультации <span>→</span></a>
+  </div>
+</section>
+
 
     <section class="projects" id="projects">
       <div class="section-head projects-head reveal">
