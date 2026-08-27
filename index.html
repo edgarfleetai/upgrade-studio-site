@@ -23,6 +23,141 @@
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
 @media(max-width:1000px){.nav,.header-cta{display:none}.menu-btn{display:block}.nav.open{display:flex;position:absolute;top:76px;left:0;right:0;background:#090909;flex-direction:column;padding:25px 5vw;border-bottom:1px solid #222}.hero{min-height:700px}.service-grid,.project-grid{grid-template-columns:repeat(2,1fr)}.dark-section{grid-template-columns:1fr}.trust-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(3,1fr);row-gap:45px}.calculator,.contacts{grid-template-columns:1fr}.about{grid-template-columns:1fr}.about-photo{min-height:360px}.footer{grid-template-columns:1fr;gap:20px}.footer p:last-child{text-align:left}}
 @media(max-width:640px){.header{padding:0 20px}.brand{min-width:0}.hero,.section,.projects,.calculator,.contacts{padding-left:20px;padding-right:20px}.hero{min-height:680px}.hero h1{font-size:48px;letter-spacing:-2px}.hero-copy{font-size:13px}.section-head{align-items:flex-start;gap:24px;flex-direction:column}.service-grid,.project-grid,.trust-grid{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr}.calc-box,.lead-form{grid-template-columns:1fr}.calc-box label,.lead-form input,.lead-form select,.lead-form textarea,.lead-form .full{grid-column:1}.stats{grid-template-columns:1fr;gap:20px}.about-copy{padding:60px 20px}.filters{width:100%}.project-meta{flex-direction:column}.hero-index{display:none}}
+
+/* --- UPGRADE STUDIO HERO v3 --- */
+.header{
+  background:rgba(7,7,7,.58);
+  backdrop-filter:blur(18px) saturate(120%);
+}
+.brand-mark{
+  width:46px;height:46px;border:0;position:relative;
+  font-size:0;letter-spacing:0;
+}
+.brand-mark:before,.brand-mark:after{
+  content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.9);
+  transform:rotate(45deg) scale(.72);
+}
+.brand-mark:after{
+  inset:8px;border-color:rgba(255,255,255,.38);
+}
+.brand-text b{font-size:16px;letter-spacing:2.8px}
+.brand-text small{font-size:8px;letter-spacing:5px;color:#aaa}
+
+.hero{
+  min-height:100vh;
+  padding-top:130px;
+  background:#080808;
+}
+.hero-bg{
+  background:
+    radial-gradient(circle at 72% 38%, rgba(255,255,255,.09), transparent 22%),
+    linear-gradient(110deg,#0b0b0b 0%,#101010 40%,#181818 100%);
+}
+.hero-bg:after{
+  right:2vw;top:9%;
+  width:67%;height:78%;
+  clip-path:polygon(14% 28%,47% 0,100% 10%,100% 100%,0 100%,0 42%);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0)),
+    linear-gradient(145deg,#343434,#0d0d0d 58%,#151515);
+  box-shadow:0 60px 150px rgba(0,0,0,.85);
+}
+.hero-bg:before{
+  right:11vw;top:29%;width:46%;height:38%;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #151515 0 7%,
+      #2d2d2d 7.2% 8.6%,
+      #151515 9% 16%
+    );
+  opacity:.72;
+  filter:contrast(110%);
+}
+.hero-overlay{
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.73) 42%,rgba(0,0,0,.16) 78%),
+    linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.48));
+}
+.hero-content{max-width:760px}
+.hero .eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:10px;letter-spacing:3.8px;color:#d4d4d4
+}
+.hero .eyebrow:before{
+  content:"";width:42px;border-top:1px solid rgba(255,255,255,.55)
+}
+.hero h1{
+  font-size:clamp(60px,7vw,104px);
+  line-height:.92;
+  letter-spacing:-4.5px;
+  max-width:900px;
+  text-wrap:balance;
+}
+.hero-copy{
+  max-width:640px;
+  font-size:16px;
+  color:#c6c6c6;
+}
+.hero-actions{margin-top:38px}
+.btn{
+  transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-light:hover{background:#dcdcdc}
+.btn-ghost:hover{background:#fff;color:#111;border-color:#fff}
+.hero-index{
+  display:flex;align-items:center;gap:10px;
+  font-size:12px;letter-spacing:2px;color:#aaa
+}
+.hero-index span{width:70px}
+.hero:after{
+  content:"SCROLL";
+  position:absolute;left:5vw;bottom:28px;z-index:3;
+  font-size:9px;letter-spacing:3px;color:#777;
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+}
+.reveal.visible.hero-content{
+  animation:heroIn .9s ease both;
+}
+@keyframes heroIn{
+  from{opacity:0;transform:translateY(36px)}
+  to{opacity:1;transform:none}
+}
+@media(max-width:640px){
+  .hero{min-height:92vh;padding-top:118px}
+  .hero h1{font-size:52px;letter-spacing:-2.8px}
+  .hero-copy{font-size:14px}
+  .hero:after{display:none}
+  .brand-text b{font-size:14px}
+}
+
+
+/* Approved hero visual */
+.hero-bg{
+  background-image:url('hero-upgrade-studio.png') !important;
+  background-size:cover !important;
+  background-position:center center !important;
+  filter:none !important;
+}
+.hero-bg:before,.hero-bg:after{display:none !important}
+.hero-overlay{
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.64) 34%,rgba(0,0,0,.18) 67%,rgba(0,0,0,.12) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.20),rgba(0,0,0,.34)) !important;
+}
+.hero-content{max-width:690px}
+.hero h1{font-size:clamp(56px,6.2vw,94px)}
+@media(max-width:900px){
+  .hero-bg{background-position:62% center !important}
+  .hero-overlay{background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.64) 70%,rgba(0,0,0,.30)) !important}
+}
+@media(max-width:640px){
+  .hero-bg{background-position:67% center !important}
+  .hero h1{font-size:48px}
+}
+
 </style>
 </head>
 <body>
@@ -49,7 +184,7 @@
       <div class="hero-content reveal">
         <p class="eyebrow">СТРОИТЕЛЬСТВО И РЕМОНТ ПОД КЛЮЧ</p>
         <h1>МЫ СОЗДАЁМ<br>ПРОСТРАНСТВО<br>ДЛЯ ЖИЗНИ</h1>
-        <p class="hero-copy">Строительство частных домов, ремонт квартир и коммерческих помещений. Работаем по договору, фиксируем этапы и держим клиента в курсе.</p>
+        <p class="hero-copy">Строительство частных домов, ремонт квартир и коммерческих пространств с понятной сметой, контролем этапов и аккуратной реализацией.</p>
         <div class="hero-actions">
           <a class="btn btn-light" href="#calc">Рассчитать стоимость <span>→</span></a>
           <a class="btn btn-ghost" href="#contacts">Связаться с нами <span>↗</span></a>
