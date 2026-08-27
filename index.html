@@ -491,6 +491,163 @@
   }
 }
 
+
+/* --- Projects premium v7 --- */
+.projects-premium{
+  padding:96px 5vw 90px;
+  background:#080808;
+  color:#fff;
+}
+.projects-top{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:80px;
+  align-items:end;
+  padding-bottom:44px;
+  border-bottom:1px solid #242424;
+}
+.projects-top h2{
+  margin:0;
+  font-size:clamp(38px,4.2vw,66px);
+  line-height:.98;
+  letter-spacing:-2.3px;
+}
+.projects-intro{
+  margin:0 0 4px;
+  max-width:590px;
+  color:#8f8f8f;
+  font-size:13px;
+  line-height:1.8;
+}
+.project-showcase{
+  display:grid;
+  grid-template-columns:1.35fr 1fr;
+  grid-template-rows:repeat(2, minmax(310px, 1fr));
+  gap:10px;
+  padding-top:34px;
+}
+.project-card{
+  position:relative;
+  min-height:310px;
+  overflow:hidden;
+  background:#151515;
+}
+.project-card-large{grid-row:1/3;min-height:630px}
+.project-visual{
+  position:absolute;
+  inset:0;
+  transition:transform .7s cubic-bezier(.2,.7,.2,1), filter .5s ease;
+}
+.project-visual-house{
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.12)),
+    url('hero-upgrade-studio.png') center/cover no-repeat;
+}
+.project-visual-flat{
+  background:
+    linear-gradient(135deg,#c8c2b8 0%,#726f69 36%,#282828 100%);
+}
+.project-visual-commercial{
+  background:
+    linear-gradient(130deg,#171717 0%,#3c3c3c 42%,#111 100%);
+}
+.project-visual-bath{
+  background:
+    linear-gradient(135deg,#111 0 31%,#c6c1b8 31% 61%,#6f6a64 61% 100%);
+}
+.project-shade{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.08) 35%,rgba(0,0,0,.82) 100%);
+  transition:background .35s ease;
+}
+.project-card:hover .project-visual{
+  transform:scale(1.035);
+  filter:contrast(1.04);
+}
+.project-card:hover .project-shade{
+  background:linear-gradient(180deg,rgba(0,0,0,.04) 22%,rgba(0,0,0,.88) 100%);
+}
+.project-badge{
+  position:absolute;
+  top:22px;
+  left:22px;
+  border:1px solid rgba(255,255,255,.34);
+  background:rgba(0,0,0,.18);
+  backdrop-filter:blur(8px);
+  padding:8px 10px;
+  font-size:8px;
+  letter-spacing:1.8px;
+}
+.project-info{
+  position:absolute;
+  left:24px;
+  right:24px;
+  bottom:22px;
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:22px;
+}
+.project-info span{
+  color:#aaa;
+  font-size:9px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+.project-info h3{
+  margin:7px 0 0;
+  font-size:clamp(20px,2vw,32px);
+  font-weight:600;
+  letter-spacing:-.8px;
+}
+.project-specs{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  text-align:right;
+  white-space:nowrap;
+}
+.projects-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+  padding-top:34px;
+}
+.projects-bottom p{
+  margin:0;
+  color:#747474;
+  font-size:12px;
+}
+@media(max-width:1000px){
+  .projects-top{grid-template-columns:1fr;gap:25px}
+  .project-showcase{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+  }
+  .project-card-large{grid-row:auto;grid-column:1/-1;min-height:500px}
+}
+@media(max-width:640px){
+  .projects-premium{padding:72px 20px 62px}
+  .projects-top{padding-bottom:34px}
+  .projects-top h2{font-size:39px;letter-spacing:-1.4px}
+  .project-showcase{grid-template-columns:1fr}
+  .project-card,
+  .project-card-large{grid-column:auto;min-height:360px}
+  .project-card-large{min-height:440px}
+  .project-info{
+    align-items:flex-start;
+    flex-direction:column;
+    left:18px;right:18px;bottom:18px
+  }
+  .project-specs{text-align:left}
+  .projects-bottom{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -716,24 +873,91 @@
 </section>
 
 
-    <section class="projects" id="projects">
-      <div class="section-head projects-head reveal">
-        <div><p class="eyebrow">НАШИ ПРОЕКТЫ</p><h2>РЕАЛИЗОВАННЫЕ РАБОТЫ</h2></div>
-        <div class="filters" role="tablist">
-          <button class="filter active" data-filter="all">Все</button>
-          <button class="filter" data-filter="house">Дома</button>
-          <button class="filter" data-filter="flat">Квартиры</button>
-          <button class="filter" data-filter="commercial">Коммерция</button>
+    
+<section class="projects projects-premium" id="projects">
+  <div class="projects-top reveal">
+    <div>
+      <p class="eyebrow">НАШИ ПРОЕКТЫ</p>
+      <h2>РАБОТЫ, КОТОРЫЕ<br>ГОВОРЯТ САМИ ЗА СЕБЯ</h2>
+    </div>
+    <p class="projects-intro">
+      Показываем объекты крупно и без лишнего шума. 
+      Сейчас в блоке стоят демонстрационные изображения — позже заменим их на реальные фотографии ваших работ.
+    </p>
+  </div>
+
+  <div class="project-showcase">
+    <article class="project-card project-card-large reveal" data-filter="house">
+      <div class="project-visual project-visual-house"></div>
+      <div class="project-shade"></div>
+      <div class="project-badge">СТРОИТЕЛЬСТВО</div>
+      <div class="project-info">
+        <div>
+          <span>01 / ДОМ</span>
+          <h3>Частный дом под ключ</h3>
+        </div>
+        <div class="project-specs">
+          <span>180 м²</span>
+          <span>Полный цикл</span>
         </div>
       </div>
-      <div class="project-grid">
-        <article class="project house reveal"><div class="project-photo p1"></div><div class="project-meta"><b>Частный дом</b><span>Строительство</span></div></article>
-        <article class="project flat reveal"><div class="project-photo p2"></div><div class="project-meta"><b>Ванная комната</b><span>Ремонт</span></div></article>
-        <article class="project flat reveal"><div class="project-photo p3"></div><div class="project-meta"><b>Квартира</b><span>Чистовая отделка</span></div></article>
-        <article class="project commercial reveal"><div class="project-photo p4"></div><div class="project-meta"><b>Офис</b><span>Коммерческий ремонт</span></div></article>
+    </article>
+
+    <article class="project-card reveal" data-filter="flat">
+      <div class="project-visual project-visual-flat"></div>
+      <div class="project-shade"></div>
+      <div class="project-badge">РЕМОНТ</div>
+      <div class="project-info">
+        <div>
+          <span>02 / КВАРТИРА</span>
+          <h3>Современная квартира</h3>
+        </div>
+        <div class="project-specs">
+          <span>76 м²</span>
+          <span>Чистовая отделка</span>
+        </div>
       </div>
-      <p class="projects-note">Фотографии в демо-версии используются для оформления. Перед запуском сайта заменим их на ваши реальные объекты.</p>
-    </section>
+    </article>
+
+    <article class="project-card reveal" data-filter="commercial">
+      <div class="project-visual project-visual-commercial"></div>
+      <div class="project-shade"></div>
+      <div class="project-badge">КОММЕРЦИЯ</div>
+      <div class="project-info">
+        <div>
+          <span>03 / БИЗНЕС</span>
+          <h3>Офисное пространство</h3>
+        </div>
+        <div class="project-specs">
+          <span>140 м²</span>
+          <span>Под ключ</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card reveal" data-filter="flat">
+      <div class="project-visual project-visual-bath"></div>
+      <div class="project-shade"></div>
+      <div class="project-badge">ИНТЕРЬЕР</div>
+      <div class="project-info">
+        <div>
+          <span>04 / ОТДЕЛКА</span>
+          <h3>Ванная комната</h3>
+        </div>
+        <div class="project-specs">
+          <span>Плитка</span>
+          <span>Инженерия</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="projects-bottom reveal">
+    <p>Портфолио будет усиливаться по мере появления новых объектов.</p>
+    <a class="btn btn-ghost" href="#contacts">Обсудить похожий проект <span>↗</span></a>
+  </div>
+</section>
+
 
     <section class="about" id="about">
       <div class="about-photo reveal"></div>
